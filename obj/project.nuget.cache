@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "gJoSn7DEOq/Za5WfgBz4tBcG93I0gEubQ2YDe9o2ibd2iYDCb4h4w0M+ybtvIZvwnMe1lq0bzZ4tNZpR9ncW8A==",
+  "success": true,
+  "projectFilePath": "E:\\Projects\\Moding\\vintage story\\teleportation-runes\\TeleportationRunes.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\riska\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\riska\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net452\\1.0.0\\microsoft.netframework.referenceassemblies.net452.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

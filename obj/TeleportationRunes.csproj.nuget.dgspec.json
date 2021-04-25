@@ -1,0 +1,53 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Projects\\Moding\\vintage story\\teleportation-runes\\TeleportationRunes.csproj": {}
+  },
+  "projects": {
+    "E:\\Projects\\Moding\\vintage story\\teleportation-runes\\TeleportationRunes.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\Moding\\vintage story\\teleportation-runes\\TeleportationRunes.csproj",
+        "projectName": "TeleportationRunes",
+        "projectPath": "E:\\Projects\\Moding\\vintage story\\teleportation-runes\\TeleportationRunes.csproj",
+        "packagesPath": "C:\\Users\\riska\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\Moding\\vintage story\\teleportation-runes\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\riska\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net452"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net452": {
+            "targetAlias": "net452",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net452": {
+          "targetAlias": "net452",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
