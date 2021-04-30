@@ -8,8 +8,8 @@
 		"preLaunchTask": "Build (Debug)",
 		"program": "${env:VINTAGE_STORY}/Vintagestory.exe",
 		"args": [
-			"--playStyle" , "preset-surviveandbuild",
-			"--openWorld" , "modding test world",
+			"--playStyle" , "preset-creativeandbuild",
+			"--openWorld" , "runes test world",
 			"--addModPath", "${workspaceFolder}/bin/Debug/net452",
 			"--addOrigin" , "${workspaceFolder}/resources/assets",
 		],

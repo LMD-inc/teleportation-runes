@@ -1,0 +1,22 @@
+{
+	"code": "rune_beacon",
+	"class": "BlockBeacon",
+	"entityClass": "Beacon",
+	"creativeinventory": { "general": ["*"] },
+	"blockmaterial": "Stone",
+	"drawtype": "json",
+	"shape": { 
+		"base": "beacon" 
+	},
+	"sidesolid": {
+		"all": "false"
+	},
+	"sideopaque": {
+		"all": "false"
+	},
+	"resistance": 3.5,
+	"sounds": {
+		"place": "game:block/anvil",
+		"walk": "game:walk/stone"
+	}
+}

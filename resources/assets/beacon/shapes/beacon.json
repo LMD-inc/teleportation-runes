@@ -1,0 +1,162 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+		"rune-r": [192,128],
+		"test": [16,16],
+		"basalt4": [16,16],
+		"copper": [16,16],
+		"granite1": [16,16]
+	},
+	"textures": {
+		"rune-r": "rune-r",
+		"copper": "copper",
+		"granite1": "granite1"
+	},
+	"elements": [
+		{
+			"name": "Cube1",
+			"from": [ 3.0, 0.0, 3.0 ], 
+			"to": [ 13.0, 1.0, 13.0 ], 
+			"rotationOrigin": [ 3.0, 0.0, 2.0 ],
+			"faces": {
+				"north": { "texture": "#copper", "uv": [ 3.5, 10.0, 13.5, 11.0 ] },
+				"east": { "texture": "#copper", "uv": [ 2.5, 8.5, 12.5, 9.5 ] },
+				"south": { "texture": "#copper", "uv": [ 2.0, 6.0, 12.0, 7.0 ] },
+				"west": { "texture": "#copper", "uv": [ 4.0, 12.0, 14.0, 13.0 ] },
+				"up": { "texture": "#copper", "uv": [ 4.5, 3.0, 14.5, 13.0 ] },
+				"down": { "texture": "#copper", "uv": [ 4.5, 5.0, 14.5, 15.0 ] }
+			},
+			"children": [
+				{
+					"name": "Cube2",
+					"from": [ 1.0, 1.0, 1.0 ], 
+					"to": [ 9.0, 4.0, 9.0 ], 
+					"rotationOrigin": [ 1.0, 1.0, 1.0 ],
+					"faces": {
+						"north": { "texture": "#granite1", "uv": [ 0.0, 0.0, 14.0, 7.0 ], "autoUv": false },
+						"east": { "texture": "#granite1", "uv": [ 0.0, 0.0, 14.0, 7.0 ], "autoUv": false },
+						"south": { "texture": "#granite1", "uv": [ 0.0, 0.0, 14.0, 7.0 ], "autoUv": false },
+						"west": { "texture": "#granite1", "uv": [ 0.0, 0.0, 14.0, 7.0 ], "autoUv": false },
+						"up": { "texture": "#granite1", "uv": [ 1.5, 4.0, 14.5, 16.0 ], "autoUv": false },
+						"down": { "texture": "#granite1", "uv": [ 0.0, 0.0, 8.0, 8.0 ], "autoUv": false }
+					}
+				}
+			]
+		},
+		{
+			"name": "Cube4",
+			"from": [ 8.0, 3.0, 8.0 ], 
+			"to": [ 8.0, 3.0, 8.0 ], 
+			"rotationOrigin": [ 8.0, 3.0, 8.0 ],
+			"faces": {
+				"north": { "texture": "#copper", "uv": [ 14.0, 13.0, 15.0, 14.0 ] },
+				"east": { "texture": "#copper", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+				"south": { "texture": "#copper", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+				"west": { "texture": "#copper", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+				"up": { "texture": "#copper", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+				"down": { "texture": "#copper", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
+			},
+			"children": [
+				{
+					"name": "Cube3",
+					"from": [ -3.0, 4.0, -3.0 ], 
+					"to": [ 3.0, 10.0, 3.0 ], 
+					"rotationOrigin": [ 0.0, 7.0, 0.0 ],
+					"rotationX": 44.999990699032814,
+					"rotationY": 44.9999868892999,
+					"rotationZ": -2.4148359393014465E-6,
+					"faces": {
+						"north": { "texture": "#rune-r", "uv": [ 0.0, 0.0, 64.0, 64.0 ], "autoUv": false },
+						"east": { "texture": "#rune-r", "uv": [ 64.0, 64.0, 128.0, 128.0 ], "autoUv": false },
+						"south": { "texture": "#rune-r", "uv": [ 0.0, 64.0, 64.0, 128.0 ], "autoUv": false },
+						"west": { "texture": "#rune-r", "uv": [ 64.0, 0.0, 128.0, 64.0 ], "autoUv": false },
+						"up": { "texture": "#rune-r", "uv": [ 128.0, 0.0, 192.0, 64.0 ], "autoUv": false },
+						"down": { "texture": "#rune-r", "uv": [ 128.0, 64.0, 192.0, 128.0 ], "autoUv": false }
+					}
+				}
+			]
+		}
+	],
+	"animations": [
+		{
+			"name": "Teleport",
+			"code": "idle",
+			"quantityframes": 60,
+			"onActivityStopped": "Rewind",
+			"onAnimationEnd": "Stop",
+			"keyframes": [
+				{
+					"frame": 0,
+					"elements": {
+						"Cube4": {  },
+						"Cube3": { "rotationX": -180.0, "rotationY": -180.0, "rotationZ": -180.0 }
+					}
+				},
+				{
+					"frame": 59,
+					"elements": {
+						"Cube4": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Cube3": { "rotationX": 180.0, "rotationY": 180.0, "rotationZ": 180.0 }
+					}
+				}
+			]
+		},
+
+		{
+			"name": "BindRune",
+			"code": "bindrune",
+			"quantityframes": 60,
+			"onActivityStopped": "Rewind",
+			"onAnimationEnd": "Stop",
+			"keyframes": [
+				{
+					"frame": 0,
+					"elements": {
+						"Cube4": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0, "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Cube3": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 30,
+					"elements": {
+						"Cube4": { "offsetX": 0.0, "offsetY": 1.0, "offsetZ": 0.0 }
+					}
+				},
+				{
+					"frame": 59,
+					"elements": {
+						"Cube4": {  },
+						"Cube3": { "rotationX": 180.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				}
+			]
+		},
+
+		{
+			"name": "Idle",
+			"code": "teleport",
+			"quantityframes": 240,
+			"onActivityStopped": "Rewind",
+			"onAnimationEnd": "Repeat",
+			"keyframes": [
+				{
+					"frame": 0,
+					"elements": {
+						"Cube4": { "rotationX": 0.0, "rotationY": -180.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 239,
+					"elements": {
+						"Cube4": { "rotationX": 0.0, "rotationY": 180.0, "rotationZ": 0.0 }
+					}
+				}
+			]
+		}
+	]
+}
