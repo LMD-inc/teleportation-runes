@@ -1,22 +1,40 @@
 {
-	"code": "rune_beacon",
-	"class": "BlockBeacon",
-	"entityClass": "Beacon",
-	"creativeinventory": { "general": ["*"] },
-	"blockmaterial": "Stone",
-	"drawtype": "json",
-	"shape": { 
-		"base": "beacon" 
-	},
-	"sidesolid": {
-		"all": "false"
-	},
-	"sideopaque": {
-		"all": "false"
-	},
-	"resistance": 3.5,
-	"sounds": {
-		"place": "game:block/anvil",
-		"walk": "game:walk/stone"
-	}
+  "code": "rune_beacon",
+  "class": "BlockBeacon",
+  "entityClass": "Beacon",
+  "creativeinventory": { "general": ["*"] },
+  "blockmaterial": "Stone",
+  "drawtype": "json",
+  "variantgroups": [
+    {
+      "code": "stone",
+      "states": ["granite", "andesite", "basalt", "peridotite"]
+    },
+    {
+      "code": "metal",
+      "states": ["copper", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "meteoriciron", "steel"]
+    }
+  ],
+  "textures": {
+    "granite1": {
+      "base": "game:block/stone/rock/{stone}*"
+    },
+    "copper": {
+      "base": "game:item/resource/plate/{metal}"
+    }
+  },
+  "shape": {
+    "base": "beacon"
+  },
+  "sidesolid": {
+    "all": "false"
+  },
+  "sideopaque": {
+    "all": "false"
+  },
+  "resistance": 3.5,
+  "sounds": {
+    "place": "game:walk/stone",
+    "walk": "game:walk/stone"
+  }
 }

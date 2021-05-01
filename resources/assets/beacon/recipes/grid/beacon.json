@@ -1,0 +1,41 @@
+{
+	"ingredientPattern": "CB_,HBG,_P_",
+	"width": 3,
+	"height": 3,
+	"attributes": {
+		"handbook": {
+			"groupBy": ["rune_beacon-*"]
+		}
+	},
+	"ingredients": {
+		"C": { 
+			"type": "item", 
+			"code": "game:chisel-*"
+		},
+		"H": { 
+			"type": "item", 
+			"code": "game:hammer-*"
+		},
+		"B": { 
+			"type": "block", 
+			"code": "game:rock-*", 
+			"allowedVariants": ["andesite", "granite", "basalt", "peridotite"],
+			"name": "stone"
+		},
+		"P": { 
+			"type": "item", 
+			"code": "game:metalplate-*",
+			"allowedVariants": ["copper", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "meteoriciron", "steel"],
+			"name": "metal"
+		},
+		"G": { 
+			"type": "item", 
+			"code": "game:gear-temporal"
+		}
+	},
+	"name": "rune_beacon",
+	"output": { 
+		"type": "block", 
+		"code": "rune_beacon-{stone}-{metal}"
+	}
+}
