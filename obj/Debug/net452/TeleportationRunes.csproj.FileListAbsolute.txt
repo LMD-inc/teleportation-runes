@@ -1,8 +1,0 @@
-E:\Projects\Moding\vintage story\teleportation-runes\obj\Debug\net452\TeleportationRunes.csprojAssemblyReference.cache
-E:\Projects\Moding\vintage story\teleportation-runes\obj\Debug\net452\TeleportationRunes.AssemblyInfoInputs.cache
-E:\Projects\Moding\vintage story\teleportation-runes\obj\Debug\net452\TeleportationRunes.AssemblyInfo.cs
-E:\Projects\Moding\vintage story\teleportation-runes\obj\Debug\net452\TeleportationRunes.csproj.CoreCompileInputs.cache
-E:\Projects\Moding\vintage story\teleportation-runes\bin\Debug\net452\TeleportationRunes.dll
-E:\Projects\Moding\vintage story\teleportation-runes\bin\Debug\net452\TeleportationRunes.pdb
-E:\Projects\Moding\vintage story\teleportation-runes\obj\Debug\net452\TeleportationRunes.dll
-E:\Projects\Moding\vintage story\teleportation-runes\obj\Debug\net452\TeleportationRunes.pdb
