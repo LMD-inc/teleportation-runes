@@ -162,13 +162,13 @@
 				{
 					"frame": 0,
 					"elements": {
-						"Cube4": { "rotationX": 0.0, "rotationY": -180.0, "rotationZ": 0.0 }
+						"Cube4": { "rotationX": 0.0, "rotationY": 0, "rotationZ": 0.0 }
 					}
 				},
 				{
 					"frame": 239,
 					"elements": {
-						"Cube4": { "rotationX": 0.0, "rotationY": 180.0, "rotationZ": 0.0 }
+						"Cube4": { "rotationX": 0.0, "rotationY": 360.0, "rotationZ": 0.0 }
 					}
 				}
 			]
