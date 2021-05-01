@@ -9,7 +9,7 @@
   "variantgroups": [
     {
       "code": "stone",
-      "states": ["granite", "andesite", "basalt", "peridotite"]
+      "states": ["granite", "andesite", "basalt"]
     },
     {
       "code": "metal",
