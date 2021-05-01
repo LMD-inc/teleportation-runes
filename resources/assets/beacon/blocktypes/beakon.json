@@ -1,7 +1,8 @@
 {
   "code": "rune_beacon",
-  "class": "BlockBeacon",
-  "entityClass": "Beacon",
+  "class": "Beacon",
+  "entityClass": "BeBeacon",
+  "entityBehaviors": [{ "name": "Animatable" }], 
   "creativeinventory": { "general": ["*"] },
   "blockmaterial": "Stone",
   "drawtype": "json",
@@ -12,7 +13,7 @@
     },
     {
       "code": "metal",
-      "states": ["copper", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "meteoriciron", "steel"]
+      "states": ["copper", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "steel"]
     }
   ],
   "textures": {

@@ -100,7 +100,7 @@
 	"animations": [
 		{
 			"name": "Teleport",
-			"code": "idle",
+			"code": "teleport",
 			"quantityframes": 60,
 			"onActivityStopped": "Rewind",
 			"onAnimationEnd": "Stop",

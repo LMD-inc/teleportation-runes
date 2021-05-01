@@ -13,36 +13,42 @@ using Vintagestory.API.MathTools;
 namespace TeleporatationRunes
 {
     public class TeleporatationRunesMod : ModSystem
-	{
-		public override void Start(ICoreAPI api)
-		{
-			api.RegisterBlockClass("BlockBeacon", typeof(BlockBeacon));
-			api.RegisterBlockEntityClass("Beacon", typeof(Beacon));
-		}
-		
-		public override void StartClientSide(ICoreClientAPI api)
-		{
-			
-		}
-		
-		public override void StartServerSide(ICoreServerAPI api)
-		{
-			
-		}
-	}
+    {
+        public override void Start(ICoreAPI api)
+        {
+            api.RegisterBlockClass("Beacon", typeof(Beacon));
+            api.RegisterBlockEntityClass("BeBeacon", typeof(BeBeacon));
+        }
 
-	public class BlockBeacon : Block 
-	{
-		
-	}
+        public override void StartClientSide(ICoreClientAPI api)
+        {
 
-	public class Beacon : BlockEntity 
-	{
-		public override void Initialize(ICoreAPI api) {
-			base.Initialize(api);
-			BEBehaviorAnimatable ats = GetBehavior<BEBehaviorAnimatable>();
-			System.Diagnostics.Debug.WriteLine("World side: " + api.World.Side.ToString());
-			System.Diagnostics.Debug.WriteLine("Animator: " + (ats == null));
-		}
-	}
+        }
+
+        public override void StartServerSide(ICoreServerAPI api)
+        {
+
+        }
+    }
+
+    public class Beacon : Block
+    {
+
+    }
+
+    public class BeBeacon : BlockEntity
+    {
+        public override void Initialize(ICoreAPI api)
+        {
+            base.Initialize(api);
+
+			BEBehaviorAnimatable animUtil = GetBehavior<BEBehaviorAnimatable>();
+
+			if (api.World.Side == EnumAppSide.Client)
+			{
+				animUtil.animUtil.InitializeAnimator("lmd:rune-beacon", new Vec3f(0, Block.Shape.rotateY, 0));
+				animUtil.animUtil.StartAnimation(new AnimationMetaData() { Animation = "Idle", Code = "idle", Weight = 1});
+			}
+        }
+    }
 }

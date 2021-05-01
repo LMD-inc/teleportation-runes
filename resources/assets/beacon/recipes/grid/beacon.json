@@ -25,7 +25,7 @@
 		"P": { 
 			"type": "item", 
 			"code": "game:metalplate-*",
-			"allowedVariants": ["copper", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "meteoriciron", "steel"],
+			"allowedVariants": ["copper", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "steel"],
 			"name": "metal"
 		},
 		"G": { 
