@@ -1,41 +1,23 @@
 {
-  "code": "rune_stone_nest",
+  "code": "rune_stone_raw_core",
   "maxstacksize": 32,
   "creativeinventory": {
     "general": ["*"]
   },
   "drawtype": "json",
-  "variantgroups": [
-    {
-      "code": "metal",
-      "states": [
-        "copper",
-        "tinbronze",
-        "bismuthbronze",
-        "blackbronze",
-        "iron",
-        "steel"
-      ]
-    }
-  ],
-  "tierbytype": {
-    "*-copper": 1,
-    "*-bismuthbronze": 2,
-    "*-tinbronze": 2,
-    "*-blackbronze": 2,
-    "*-iron": 3,
-    "*-steel": 4
+  "shape": {
+    "base": "core"
   },
   "textures": {
-    "copper": {
-      "base": "game:item/resource/plate/{metal}"
+    "all": {
+      "base": "game:block/clay/blueclay"
     }
   },
   "guiTransform": {
     "translation": { "x": 10, "y": 10, "z": 0 },
     "rotation": { "x": 100, "y": 20, "z": 20 },
     "origin": { "x": 0.6, "y": -0.2, "z": 0.44 },
-    "scale": 2.1
+    "scale": 3
   },
   "fpHandTransform": {
     "translation": { "x": -0.45, "y": -0.1, "z": 0 },
@@ -54,8 +36,5 @@
     "rotation": { "x": 0, "y": 0, "z": 0 },
     "origin": { "x": 0, "y": 0, "z": 0 },
     "scale": 3
-  },
-  "shape": {
-    "base": "nest"
   }
 }

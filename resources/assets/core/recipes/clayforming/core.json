@@ -1,0 +1,26 @@
+{
+    "ingredient": {
+      "type": "item",
+      "code": "game:clay-*",
+      "name": "type",
+      "allowedVariants": ["blue", "fire"]
+    },
+    "pattern": [
+      [
+        "###",
+        "###",
+        "###"
+      ],
+      [
+        "___",
+        "_#_",
+        "___"
+      ]
+    ],
+    "name": "rune_stone_raw_core",
+    "output": { 
+        "type": "item", 
+        "code": "rune_stone_raw_core"
+    }
+  }
+  
