@@ -1,0 +1,33 @@
+{
+  "ingredient": {
+    "type": "item",
+    "code": "game:ingot-*",
+    "name": "metal",
+    "allowedVariants": [
+      "copper",
+      "tinbronze",
+      "bismuthbronze",
+      "blackbronze",
+      "iron",
+      "steel"
+    ]
+  },
+  "pattern": [
+    [
+		"#####", 
+		"#####", 
+		"##_##",
+		"#####",  
+		"#####"
+	],
+	[
+		"#####", 
+		"#___#", 
+		"#___#",
+		"#___#",  
+		"#####"
+	]
+  ],
+  "name": "rune_stone_nest",
+  "output": { "type": "item", "code": "rune_stone_nest-{metal}" }
+}

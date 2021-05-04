@@ -8,7 +8,7 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"copper": "E:/Projects/Moding/vintage story/teleportation-runes/resources/assets/nest/textures/copper"
+		"copper": "copper"
 	},
 	"elements": [
 		{
