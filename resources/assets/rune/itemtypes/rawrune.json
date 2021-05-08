@@ -29,8 +29,8 @@
     "copper": {
       "base": "game:item/resource/plate/{metal}"
     },
-    "rune-r": {
-      "base": "rune-r"
+    "rune": {
+      "base": "rune"
     }
   },
   "combustibleprops": {
