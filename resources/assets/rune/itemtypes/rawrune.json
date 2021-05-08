@@ -1,10 +1,12 @@
 {
-  "code": "rune_stone_nest",
+  "code": "raw_rune_stone",
   "maxstacksize": 32,
-  "creativeinventory": { "general": ["*"], "items": ["*"] },
+  "creativeinventory": {
+    "general": ["*"], "items": ["*"]
+  },
   "drawtype": "json",
   "shape": {
-    "base": "nest"
+    "base": "rune"
   },
   "variantgroups": [
     {
@@ -20,8 +22,14 @@
     }
   ],
   "textures": {
+    "granite1": {
+      "base": "game:block/clay/blueclay"
+    },
     "copper": {
       "base": "game:item/resource/plate/{metal}"
+    },
+    "rune-r": {
+      "base": "rune-r"
     }
   },
   "guiTransform": {
