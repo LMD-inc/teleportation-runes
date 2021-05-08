@@ -1,0 +1,60 @@
+{
+    "code": "rune_stone",
+    "maxstacksize": 32,
+    "creativeinventory": {
+      "general": ["*"], "items": ["*"]
+    },
+    "drawtype": "json",
+    "shape": {
+      "base": "rune"
+    },
+    "variantgroups": [
+      {
+        "code": "metal",
+        "states": [
+          "copper",
+          "tinbronze",
+          "bismuthbronze",
+          "blackbronze",
+          "iron",
+          "steel"
+        ]
+      }
+    ],
+    "textures": {
+      "granite1": {
+        "base": "game:block/clay/ceramic-dark"
+      },
+      "copper": {
+        "base": "game:item/resource/plate/{metal}"
+      },
+      "rune-r": {
+        "base": "rune-r"
+      }
+    },
+    "guiTransform": {
+      "translation": { "x": 10, "y": 10, "z": 0 },
+      "rotation": { "x": 100, "y": 20, "z": 20 },
+      "origin": { "x": 0.6, "y": -0.2, "z": 0.44 },
+      "scale": 2.1
+    },
+    "fpHandTransform": {
+      "translation": { "x": -0.45, "y": -0.1, "z": 0 },
+      "rotation": { "x": -167, "y": 170, "z": -90 },
+      "origin": { "x": 0.5, "y": 0.6, "z": 0.5 },
+      "scale": 3.15
+    },
+    "tpHandTransform": {
+      "translation": { "x": 0, "y": 0, "z": 0 },
+      "rotation": { "x": 90, "y": 0, "z": 15 },
+      "origin": { "x": 0.12, "y": -0.85, "z": -0.65 },
+      "scale": 0.7
+    },
+    "groundTransform": {
+      "translation": { "x": 0, "y": 0, "z": 0 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
+      "origin": { "x": 0, "y": 0, "z": 0 },
+      "scale": 3
+    }
+  }
+  

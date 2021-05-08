@@ -2,7 +2,8 @@
   "code": "raw_rune_stone",
   "maxstacksize": 32,
   "creativeinventory": {
-    "general": ["*"], "items": ["*"]
+    "general": ["*"],
+    "items": ["*"]
   },
   "drawtype": "json",
   "shape": {
@@ -31,6 +32,17 @@
     "rune-r": {
       "base": "rune-r"
     }
+  },
+  "combustibleprops": {
+    "meltingPoint": 950,
+    "meltingDuration": 30,
+    "smeltedRatio": 1,
+    "smeltingType": "bake",
+    "smeltedStack": {
+      "type": "item",
+      "code": "rune_stone-{metal}"
+    },
+    "requiresContainer": false
   },
   "guiTransform": {
     "translation": { "x": 10, "y": 10, "z": 0 },
