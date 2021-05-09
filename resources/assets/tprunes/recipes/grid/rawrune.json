@@ -5,12 +5,12 @@
 	"ingredients": {
 		"N": { 
 			"type": "item", 
-			"code": "nest:rune_stone_nest-*",
+			"code": "rune_stone_nest-*",
             "name": "material"
 		},
 		"C": { 
 			"type": "item", 
-			"code": "core:rune_stone_raw_core"
+			"code": "rune_stone_raw_core"
 		},
 		"G": { 
 			"type": "item", 

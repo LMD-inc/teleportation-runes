@@ -171,12 +171,12 @@
 			"rotationOrigin": [ 10.0, 0.2, 6.0 ],
 			"rotationY": -90.0,
 			"faces": {
-				"north": { "texture": "#rune-r", "uv": [ 0.0, 4.0, 1.5, 2.5 ], "autoUv": false },
-				"east": { "texture": "#rune-r", "uv": [ 0.5, 4.0, 2.5, 5.5 ], "autoUv": false },
-				"south": { "texture": "#rune-r", "uv": [ 0.0, 4.0, 3.5, 3.5 ], "autoUv": false },
-				"west": { "texture": "#rune-r", "uv": [ 0.5, 4.0, 5.5, 5.5 ], "autoUv": false },
-				"up": { "texture": "#rune-r", "uv": [ 4.0, 2.0, 12.0, 13.0 ], "autoUv": false },
-				"down": { "texture": "#rune-r", "uv": [ 0.0, 0.0, 3.5, 4.0 ] }
+				"north": { "texture": "#rune", "uv": [ 0.0, 4.0, 1.5, 2.5 ], "autoUv": false },
+				"east": { "texture": "#rune", "uv": [ 0.5, 4.0, 2.5, 5.5 ], "autoUv": false },
+				"south": { "texture": "#rune", "uv": [ 0.0, 4.0, 3.5, 3.5 ], "autoUv": false },
+				"west": { "texture": "#rune", "uv": [ 0.5, 4.0, 5.5, 5.5 ], "autoUv": false },
+				"up": { "texture": "#rune", "uv": [ 4.0, 2.0, 12.0, 13.0 ], "autoUv": false },
+				"down": { "texture": "#rune", "uv": [ 0.0, 0.0, 3.5, 4.0 ] }
 			},
 			"children": [
 				{
