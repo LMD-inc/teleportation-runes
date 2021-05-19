@@ -22,5 +22,9 @@
     "item-rune_stone-bismuthbronze": "Rune stone - bismuthbronze",
     "item-rune_stone-blackbronze": " Rune stone - blackbronze",
     "item-rune_stone-iron": "Rune stone - iron",
-    "item-rune_stone-steel": "Rune stone - steel"
+    "item-rune_stone-steel": "Rune stone - steel",
+    "beacon_location_name": "Specify name of rune destination point.",
+    "rune_bound_to": "Teleports to:",
+    "bind_to_beacon": "Bind to beacon",
+    "hold_to_teleport": "Hold to teleport to:"
 }

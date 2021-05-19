@@ -22,5 +22,9 @@
     "item-rune_stone-bismuthbronze": "Рунный камень - висмутовая бронза",
     "item-rune_stone-blackbronze": "Рунный камень - черная бронза",
     "item-rune_stone-iron": "Руннный камень - железо",
-    "item-rune_stone-steel": "Рунный камень - сталь"
+    "item-rune_stone-steel": "Рунный камень - сталь",
+    "beacon_location_name": "Введите имя точки телепорта.",
+    "rune_bound_to": "Телепортирует к:",
+    "bind_to_beacon": "Привязать к маяку",
+    "hold_to_teleport": "Зажать чтобы телепортироваться к:"
 }

@@ -12,7 +12,6 @@ namespace TeleporatationRunes
         public override void Initialize(ICoreAPI api)
         {
             base.Initialize(api);
-
             BEBehaviorAnimatable animUtil = GetBehavior<BEBehaviorAnimatable>();
 
             if (api.World.Side == EnumAppSide.Client && animUtil != null)

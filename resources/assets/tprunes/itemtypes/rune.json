@@ -1,6 +1,7 @@
 {
     "code": "rune_stone",
-    "maxstacksize": 32,
+    "class": "ItemRune",
+    "maxstacksize": 1,
     "creativeinventory": {
       "general": ["*"], "items": ["*"]
     },

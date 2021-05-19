@@ -14,6 +14,7 @@ namespace TeleporatationRunes
         public override void Start(ICoreAPI api)
         {
             api.RegisterBlockEntityClass("BEBeacon", typeof(BEBeacon));
+            api.RegisterItemClass("ItemRune", typeof(ItemRune));
         }
 
         public override void StartClientSide(ICoreClientAPI api)
