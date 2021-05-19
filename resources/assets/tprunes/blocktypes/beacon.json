@@ -2,7 +2,7 @@
   "code": "rune_beacon",
   "maxstacksize": 8,
   "class": "Beacon",
-  "entityClass": "BeBeacon",
+  "entityClass": "BEBeacon",
   "entityBehaviors": [{ "name": "Animatable" }],
   "creativeinventory": { "general": ["*"] },
   "blockmaterial": "Stone",

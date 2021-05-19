@@ -7,7 +7,7 @@ using Vintagestory.API.Config;
 
 namespace TeleporatationRunes
 {
-    public class BeBeacon : BlockEntity
+    public class BEBeacon : BlockEntity
     {
         public override void Initialize(ICoreAPI api)
         {
