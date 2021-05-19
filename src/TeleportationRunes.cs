@@ -13,7 +13,6 @@ namespace TeleporatationRunes
     {
         public override void Start(ICoreAPI api)
         {
-            api.RegisterBlockClass("Beacon", typeof(Beacon));
             api.RegisterBlockEntityClass("BEBeacon", typeof(BEBeacon));
         }
 
