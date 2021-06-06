@@ -25,6 +25,8 @@
     "item-rune_stone-steel": "Рунный камень - сталь",
     "beacon_location_name": "Введите имя точки телепорта.",
     "rune_bound_to": "Телепортирует к:",
+    "tptime": "Время телепортации:",
+    "seconds": "секунд",
     "bind_to_beacon": "Привязать к маяку",
     "hold_to_teleport": "Зажать чтобы телепортироваться к:",
     "game:tabname-tprunesmod": "Руны телепортации"

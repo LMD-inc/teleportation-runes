@@ -42,6 +42,7 @@ namespace TeleporatationRunes
         {
             base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
             string name = inSlot.Itemstack.Attributes.GetString("name");
+            dsc.AppendLine(Lang.Get("tprunes:tptime") + " " + GetTpTime() + " "+ Lang.Get("tprunes:seconds"));
 
             if (name == null)
             {
@@ -81,8 +82,7 @@ namespace TeleporatationRunes
             }
             // TODO: Create particels indicating tp process
             // TODO: Play teleport sound
-            // TODO: Make teleport time dependant on rune material
-            if (secondsUsed > 2 && !_teleported && _validated)
+            if (secondsUsed > GetTpTime() && !_teleported && _validated)
             {
                 if (!byEntity.Teleporting && slot.Itemstack.Attributes.HasAttribute("x"))
                 {
@@ -190,6 +190,10 @@ namespace TeleporatationRunes
                 slot.Itemstack.Attributes.SetInt("z", blockSel.Position.Z);
             }
             slot.MarkDirty();
+        }
+
+        private int GetTpTime() {
+            return this.Attributes["tpTime"].AsInt();
         }
     }
 }

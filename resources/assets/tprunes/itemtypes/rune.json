@@ -25,6 +25,26 @@
         ]
       }
     ],
+    "attributesByType": {
+      "*-copper": {
+        "tptime": 5
+      },
+      "*-tinbronze": {
+        "tptime": 4
+      },
+      "*-bismuthbronze": {
+        "tptime": 4
+      },
+      "*-blackbronze": {
+        "tptime": 4
+      },
+      "*-iron": {
+        "tptime": 3
+      },
+      "*-steel": {
+        "tptime": 2
+      }
+    },
     "textures": {
       "granite1": {
         "base": "game:block/clay/ceramic-dark"

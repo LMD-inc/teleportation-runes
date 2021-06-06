@@ -25,6 +25,8 @@
     "item-rune_stone-steel": "Rune stone - steel",
     "beacon_location_name": "Specify name of rune destination point.",
     "rune_bound_to": "Teleports to:",
+    "tptime": "Teleportation time:",
+    "seconds": "seconds",
     "bind_to_beacon": "Bind to beacon",
     "hold_to_teleport": "Hold to teleport to:",
     "game:tabname-tprunesmod": "Teleportation Runes"
