@@ -6,7 +6,7 @@ using Vintagestory.API.Server;
     Description = "Mod that simplifies traveling in the world using gothic-like teleportation stones.",
     Website = "https://github.com/LMD-inc/teleportation-runes",
     Version = "0.1.0",
-    Authors = new[] { "LMD-inc" })]
+    Authors = new[] { "LMD-inc", "dKosher" })]
 namespace TeleporatationRunes
 {
     public class TeleporatationRunesMod : ModSystem
