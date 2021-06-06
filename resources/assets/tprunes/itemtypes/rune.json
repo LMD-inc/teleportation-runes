@@ -3,7 +3,10 @@
     "class": "ItemRune",
     "maxstacksize": 1,
     "creativeinventory": {
-      "general": ["*"], "items": ["*"]
+      "general": ["*"], 
+      "items": ["*"],
+      "tools": ["*"],
+      "tprunesmod": ["*"]
     },
     "drawtype": "json",
     "shape": {

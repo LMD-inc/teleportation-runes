@@ -2,7 +2,8 @@
   "code": "rune_stone_raw_core",
   "maxstacksize": 32,
   "creativeinventory": {
-    "general": ["*"]
+    "general": ["*"],
+    "tprunesmod": ["*"]
   },
   "drawtype": "json",
   "shape": {

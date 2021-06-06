@@ -1,7 +1,11 @@
 {
   "code": "rune_stone_nest",
   "maxstacksize": 32,
-  "creativeinventory": { "general": ["*"], "items": ["*"] },
+  "creativeinventory": { 
+    "general": ["*"], 
+    "items": ["*"],
+    "tprunesmod": ["*"] 
+  },
   "drawtype": "json",
   "shape": {
     "base": "nest"

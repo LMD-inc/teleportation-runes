@@ -4,7 +4,10 @@
   "class": "Block",
   "entityClass": "BEBeacon",
   "entityBehaviors": [{ "name": "Animatable" }],
-  "creativeinventory": { "general": ["*"] },
+  "creativeinventory": { 
+    "general": ["*"],
+    "tprunesmod": ["*"]
+   },
   "blockmaterial": "Stone",
   "drawtype": "json",
   "variantgroups": [

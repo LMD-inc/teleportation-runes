@@ -30,7 +30,11 @@
     "*-burned": "ToolMold"
   },
   "blockmaterial": "Ceramic",
-  "creativeinventory": { "general": ["*"], "construction": ["*"] },
+  "creativeinventory": { 
+    "general": ["*"], 
+    "construction": ["*"],
+    "tprunesmod": ["*"]
+  },
   "replaceable": 700,
   "resistance": 2,
   "maxStackSize": 8,

@@ -26,5 +26,6 @@
     "beacon_location_name": "Введите имя точки телепорта.",
     "rune_bound_to": "Телепортирует к:",
     "bind_to_beacon": "Привязать к маяку",
-    "hold_to_teleport": "Зажать чтобы телепортироваться к:"
+    "hold_to_teleport": "Зажать чтобы телепортироваться к:",
+    "game:tabname-tprunesmod": "Руны телепортации"
 }

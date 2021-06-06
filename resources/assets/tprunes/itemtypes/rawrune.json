@@ -3,7 +3,8 @@
   "maxstacksize": 32,
   "creativeinventory": {
     "general": ["*"],
-    "items": ["*"]
+    "items": ["*"],
+    "tprunesmod": ["*"]
   },
   "drawtype": "json",
   "shape": {
