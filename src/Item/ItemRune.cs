@@ -16,6 +16,7 @@ namespace TeleporatationRunes
         private bool _teleported = true;
         private bool _validated = false;
         private bool _runAnimation = false;
+        private BlockPos _initialPos;
 
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
         {
@@ -30,6 +31,7 @@ namespace TeleporatationRunes
                 _teleported = false;
                 _validated = false;
                 _runAnimation = true;
+                _initialPos = byEntity.Pos.AsBlockPos;
             }
             else
             {
@@ -87,12 +89,14 @@ namespace TeleporatationRunes
                 if (!byEntity.Teleporting && slot.Itemstack.Attributes.HasAttribute("x"))
                 {
                     byEntity.TeleportToDouble(pos.X, pos.Y, pos.Z, () => _teleported = true);
-                    // TODO: Decrease durability.
+                    BlockPos teleportTo = new BlockPos((int) pos.X, (int) pos.Y,(int) pos.Z); 
+                    slot.Itemstack.Collectible.DamageItem(byEntity.World, byEntity, slot, (int) _initialPos.DistanceTo(teleportTo) / 10);
+                    slot.MarkDirty();
                 }
             }
             if (_runAnimation)
             {
-                // learn how to run animation on server side
+                // Learn how to run animation on server side (for other players)
                 BEBeacon beacon = byEntity.World.BlockAccessor.GetBlockEntity(new BlockPos((int)pos.X, (int)pos.Y, (int)pos.Z)) as BEBeacon;
 
                 if (beacon != null)
@@ -193,7 +197,7 @@ namespace TeleporatationRunes
         }
 
         private int GetTpTime() {
-            return this.Attributes["tpTime"].AsInt();
+            return this.Attributes["tptime"].AsInt();
         }
     }
 }

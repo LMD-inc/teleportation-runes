@@ -25,6 +25,14 @@
         ]
       }
     ],
+    "durabilityByType": {
+      "*-copper": 1000,
+      "*-tinbronze": 2000,
+      "*-bismuthbronze": 2000,
+      "*-blackbronze": 2000,
+      "*-iron": 4000,
+      "*-steel": 8000
+    },
     "attributesByType": {
       "*-copper": {
         "tptime": 5
