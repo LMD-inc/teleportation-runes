@@ -64,10 +64,6 @@ namespace TeleporatationRunes
                 {
                     _rune.Itemstack.Attributes.SetString("name", text);
                 }
-
-            }
-            if (packetid == (int)EnumSignPacketId.CancelEdit)
-            {
             }
         }
 

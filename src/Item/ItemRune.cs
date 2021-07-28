@@ -12,6 +12,20 @@ namespace TeleporatationRunes
 {
     public class ItemRune : Item
     {
+        SimpleParticleProperties particles = new SimpleParticleProperties(
+            minQuantity: 1,
+            maxQuantity: 1,
+            color: ColorUtil.WhiteAhsl,
+            minPos: new Vec3d(),
+            maxPos: new Vec3d(),
+            minVelocity: new Vec3f(-0.25f, 0.1f, -0.25f),
+            maxVelocity: new Vec3f(0.25f, 0.1f, 0.25f),
+            lifeLength: 0.2f,
+            gravityEffect: 0.075f,
+            minSize: 0.1f,
+            maxSize: 0.1f,
+            model: EnumParticleModel.Cube
+        );
 
         private bool _teleported = true;
         private bool _validated = false;

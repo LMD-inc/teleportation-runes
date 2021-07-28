@@ -5,11 +5,13 @@
 	"ingredients": {
 		"C": { 
 			"type": "item", 
-			"code": "game:chisel-*"
+			"code": "game:chisel-*",
+			"isTool": true
 		},
 		"H": { 
 			"type": "item", 
-			"code": "game:hammer-*"
+			"code": "game:hammer-*",
+			"isTool": true
 		},
 		"B": { 
 			"type": "block", 

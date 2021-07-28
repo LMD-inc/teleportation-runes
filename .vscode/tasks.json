@@ -9,7 +9,7 @@
         "mkdir -p mods;",
         "mkdir mods/${workspaceFolderBasename};",
         "cp -r resources/* mods/${workspaceFolderBasename};",
-        "cp -r bin/Debug/net452/* mods/${workspaceFolderBasename};"
+        "cp -r bin/Debug/net461/* mods/${workspaceFolderBasename};"
       ],
       "presentation": {
         "reveal": "silent"
