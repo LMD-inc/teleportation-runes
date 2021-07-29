@@ -10,6 +10,7 @@ namespace TeleporatationRunes
         private static SimpleParticleProperties _teleportingParticles;
         private static SimpleParticleProperties _teleportedParticles;
         private static SimpleParticleProperties _detachedParticles;
+        private static SimpleParticleProperties _blockedParticles;
 
         public static SimpleParticleProperties Get(ParticleType type, EntityAgent byEntity)
         {
@@ -24,6 +25,9 @@ namespace TeleporatationRunes
                     break;
                 case ParticleType.DETACHED:
                     particles = GetDetached();
+                    break;
+                case ParticleType.BLOCKED:
+                    particles = GetBlocked();
                     break;
                 default:
                     particles = new SimpleParticleProperties();
@@ -74,11 +78,25 @@ namespace TeleporatationRunes
             {
                 return _detachedParticles;
             }
+            _detachedParticles = GetDefaultParticles();
             Random rand = new Random();
-            _teleportedParticles.Color = ColorUtil.ColorFromRgba(rand.Next(0, 90), rand.Next(240, 255), rand.Next(240, 255), 250);
-            _teleportingParticles.OpacityEvolve = new EvolvingNatFloat(EnumTransformFunction.LINEAR, -255);
-            _teleportingParticles.SizeEvolve = EvolvingNatFloat.create(EnumTransformFunction.SINUS, 0.5f);
+            _detachedParticles.Color = ColorUtil.ColorFromRgba(rand.Next(0, 40), rand.Next(0, 40), rand.Next(240, 255), 250);
+            _detachedParticles.OpacityEvolve = new EvolvingNatFloat(EnumTransformFunction.LINEAR, -255);
+            _detachedParticles.SizeEvolve = EvolvingNatFloat.create(EnumTransformFunction.SINUS, 0.5f);
             return _detachedParticles;
+        }
+
+        private static SimpleParticleProperties GetBlocked() {
+            if (_blockedParticles != null)
+            {
+                return _blockedParticles;
+            }
+            _blockedParticles = GetDefaultParticles();
+            Random rand = new Random();
+            _blockedParticles.Color = ColorUtil.ColorFromRgba(rand.Next(0, 40), rand.Next(50, 160), rand.Next(120, 160), 250);
+            _blockedParticles.OpacityEvolve = new EvolvingNatFloat(EnumTransformFunction.LINEAR, -255);
+            _blockedParticles.SizeEvolve = EvolvingNatFloat.create(EnumTransformFunction.SINUS, 0.5f);
+            return _blockedParticles;
         }
 
         private static SimpleParticleProperties GetDefaultParticles()

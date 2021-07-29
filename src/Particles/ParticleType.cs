@@ -13,6 +13,6 @@ namespace TeleporatationRunes
 {
     public enum ParticleType
     {
-        TELEPORTING, TELEPORTED, DETACHED
+        TELEPORTING, TELEPORTED, DETACHED, BLOCKED
     }
 }
