@@ -7,26 +7,12 @@ using Vintagestory.API.MathTools;
 
 using System.Text;
 using System.IO;
+using System;
 
 namespace TeleporatationRunes
 {
     public class ItemRune : Item
     {
-        SimpleParticleProperties particles = new SimpleParticleProperties(
-            minQuantity: 1,
-            maxQuantity: 1,
-            color: ColorUtil.WhiteAhsl,
-            minPos: new Vec3d(),
-            maxPos: new Vec3d(),
-            minVelocity: new Vec3f(-0.25f, 0.1f, -0.25f),
-            maxVelocity: new Vec3f(0.25f, 0.1f, 0.25f),
-            lifeLength: 0.2f,
-            gravityEffect: 0.075f,
-            minSize: 0.1f,
-            maxSize: 0.1f,
-            model: EnumParticleModel.Cube
-        );
-
         private bool _teleported = true;
         private bool _validated = false;
         private bool _runAnimation = false;
@@ -96,7 +82,6 @@ namespace TeleporatationRunes
                     OnLoaded = () => ValidateBeaconExistance(pos, slot, byEntity)
                 });
             }
-            // TODO: Create particels indicating tp process
             // TODO: Play teleport sound
             if (secondsUsed > GetTpTime() && !_teleported && _validated)
             {
@@ -106,7 +91,13 @@ namespace TeleporatationRunes
                     BlockPos teleportTo = new BlockPos((int) pos.X, (int) pos.Y,(int) pos.Z); 
                     slot.Itemstack.Collectible.DamageItem(byEntity.World, byEntity, slot, (int) _initialPos.DistanceTo(teleportTo) / 10);
                     slot.MarkDirty();
+
+                    byEntity.World.SpawnParticles(ParticleFactory.Get(ParticleType.TELEPORTED, byEntity));
                 }
+            }
+            else if (secondsUsed + 0.4 < GetTpTime())
+            {
+                byEntity.World.SpawnParticles(ParticleFactory.Get(ParticleType.TELEPORTING, byEntity));
             }
             if (_runAnimation)
             {
@@ -129,8 +120,8 @@ namespace TeleporatationRunes
             if (beacon == null)
             {
                 // Beacon destroyed
-                // TODO: Create sad particles indicating that beacon is removed.
                 // TODO: Play failure sound.
+                byEntity.World.SpawnParticles(ParticleFactory.Get(ParticleType.DETACHED, byEntity));
                 setName(null, slot);
                 saveBeaconPosition(null, slot, null);
                 _teleported = true;
