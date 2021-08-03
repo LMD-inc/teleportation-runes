@@ -7,26 +7,13 @@ using Vintagestory.API.MathTools;
 
 using System.Text;
 using System.IO;
+using System;
+using System.Collections.Generic;
 
 namespace TeleporatationRunes
 {
     public class ItemRune : Item
     {
-        SimpleParticleProperties particles = new SimpleParticleProperties(
-            minQuantity: 1,
-            maxQuantity: 1,
-            color: ColorUtil.WhiteAhsl,
-            minPos: new Vec3d(),
-            maxPos: new Vec3d(),
-            minVelocity: new Vec3f(-0.25f, 0.1f, -0.25f),
-            maxVelocity: new Vec3f(0.25f, 0.1f, 0.25f),
-            lifeLength: 0.2f,
-            gravityEffect: 0.075f,
-            minSize: 0.1f,
-            maxSize: 0.1f,
-            model: EnumParticleModel.Cube
-        );
-
         private bool _teleported = true;
         private bool _validated = false;
         private bool _runAnimation = false;
@@ -58,7 +45,7 @@ namespace TeleporatationRunes
         {
             base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
             string name = inSlot.Itemstack.Attributes.GetString("name");
-            dsc.AppendLine(Lang.Get("tprunes:tptime") + " " + GetTpTime() + " "+ Lang.Get("tprunes:seconds"));
+            dsc.AppendLine(Lang.Get("tprunes:tptime") + " " + GetTpTime() + " " + Lang.Get("tprunes:seconds"));
 
             if (name == null)
             {
@@ -96,17 +83,29 @@ namespace TeleporatationRunes
                     OnLoaded = () => ValidateBeaconExistance(pos, slot, byEntity)
                 });
             }
-            // TODO: Create particels indicating tp process
             // TODO: Play teleport sound
             if (secondsUsed > GetTpTime() && !_teleported && _validated)
             {
                 if (!byEntity.Teleporting && slot.Itemstack.Attributes.HasAttribute("x"))
                 {
+                    Vec3d tpPosition = GetRandomizedTeleportPosition(pos, byEntity, GetRandomVectorsList());
+
+                    if (tpPosition == null)
+                    {
+                        byEntity.World.SpawnParticles(ParticleFactory.Get(ParticleType.BLOCKED, byEntity));
+                        return !_teleported;
+                    }
                     byEntity.TeleportToDouble(pos.X, pos.Y, pos.Z, () => _teleported = true);
-                    BlockPos teleportTo = new BlockPos((int) pos.X, (int) pos.Y,(int) pos.Z); 
-                    slot.Itemstack.Collectible.DamageItem(byEntity.World, byEntity, slot, (int) _initialPos.DistanceTo(teleportTo) / 10);
+                    BlockPos teleportTo = new BlockPos((int)pos.X, (int)pos.Y, (int)pos.Z);
+                    slot.Itemstack.Collectible.DamageItem(byEntity.World, byEntity, slot, (int)_initialPos.DistanceTo(teleportTo) / 10);
                     slot.MarkDirty();
+
+                    byEntity.World.SpawnParticles(ParticleFactory.Get(ParticleType.TELEPORTED, byEntity));
                 }
+            }
+            else if (secondsUsed + 0.4 < GetTpTime())
+            {
+                byEntity.World.SpawnParticles(ParticleFactory.Get(ParticleType.TELEPORTING, byEntity));
             }
             if (_runAnimation)
             {
@@ -122,6 +121,31 @@ namespace TeleporatationRunes
             return !_teleported;
         }
 
+        private List<Vec3d> GetRandomVectorsList() 
+        {
+            return new List<Vec3d>{ new Vec3d(-1, 0, 0), new Vec3d(1, 0, 0), new Vec3d(0, 0, 1), new Vec3d(0, 0, -1)};
+        }
+
+        private Vec3d GetRandomizedTeleportPosition(Vec3d pos, EntityAgent byEntity, List<Vec3d> vectors)
+        {
+            if (vectors.Count == 0)
+            {
+                return null;
+            }
+            var random = new Random();
+            int index = random.Next(vectors.Count);
+            pos.Add(vectors[index]);
+            Block block = byEntity.World.BlockAccessor.GetBlock(new BlockPos((int)pos.X, (int)pos.Y, (int)pos.Z));
+            Block blockAbove = byEntity.World.BlockAccessor.GetBlock(new BlockPos((int)pos.X, (int)pos.Y + 1, (int)pos.Z));
+
+            if (block.BlockMaterial != EnumBlockMaterial.Air || blockAbove.BlockMaterial != EnumBlockMaterial.Air)
+            {
+                vectors.RemoveAt(index);
+                return GetRandomizedTeleportPosition(pos, byEntity, vectors);
+            }
+            return pos;
+        }
+
         private void ValidateBeaconExistance(Vec3d pos, ItemSlot slot, EntityAgent byEntity)
         {
             BEBeacon beacon = byEntity.World.BlockAccessor.GetBlockEntity(new BlockPos((int)pos.X, (int)pos.Y, (int)pos.Z)) as BEBeacon;
@@ -129,8 +153,8 @@ namespace TeleporatationRunes
             if (beacon == null)
             {
                 // Beacon destroyed
-                // TODO: Create sad particles indicating that beacon is removed.
                 // TODO: Play failure sound.
+                byEntity.World.SpawnParticles(ParticleFactory.Get(ParticleType.DETACHED, byEntity));
                 setName(null, slot);
                 saveBeaconPosition(null, slot, null);
                 _teleported = true;
@@ -210,7 +234,8 @@ namespace TeleporatationRunes
             slot.MarkDirty();
         }
 
-        private int GetTpTime() {
+        private int GetTpTime()
+        {
             return this.Attributes["tptime"].AsInt();
         }
     }
