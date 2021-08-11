@@ -113,6 +113,32 @@ namespace TeleporatationRunes
           _runAnimation = false;
         }
       }
+
+      if (byEntity.World is IClientWorldAccessor)
+      {
+        ModelTransform tf = new ModelTransform();
+        tf.EnsureDefaultValues();
+
+        float offset = GameMath.Clamp(secondsUsed * 4f, 0, 1f);
+
+        if (secondsUsed < 0.35f)
+        {
+          tf.Translation.Set(-offset / 5, offset / 5, offset / 5);
+        }
+        else
+        {
+          var rand = new Random();
+
+          tf.Translation.Set(
+            -offset / 5 + ((float)rand.NextDouble() * 0.02f),
+            offset / 5 + ((float)rand.NextDouble() * 0.02f),
+            offset / 5 + ((float)rand.NextDouble() * 0.02f)
+          );
+        }
+
+        byEntity.Controls.UsingHeldItemTransformBefore = tf;
+      }
+
       return !_teleported;
     }
 
