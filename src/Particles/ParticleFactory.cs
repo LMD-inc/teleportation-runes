@@ -33,8 +33,9 @@ namespace TeleporatationRunes
                     particles = new SimpleParticleProperties();
                     break;
             }
-            particles.MinPos = byEntity.Pos.XYZ.AddCopy(-0.05, -0.05, -0.05);
-            particles.AddPos.Set(1, 1, 1);
+            Random rand = new Random();
+            particles.MinPos = byEntity.Pos.XYZ.Add(0, 1, 0).Ahead(1f, byEntity.Pos.Pitch, byEntity.Pos.Yaw);
+            particles.AddPos.Set(0.5, 1, 0.5);
             return particles;
         }
 
@@ -86,7 +87,8 @@ namespace TeleporatationRunes
             return _detachedParticles;
         }
 
-        private static SimpleParticleProperties GetBlocked() {
+        private static SimpleParticleProperties GetBlocked()
+        {
             if (_blockedParticles != null)
             {
                 return _blockedParticles;
