@@ -42,7 +42,7 @@ namespace TeleporatationRunes
       string name = inSlot.Itemstack.Attributes.GetString("name");
       dsc.AppendLine(Lang.Get("tprunes:tptime") + " " + GetTpTime() + " " + Lang.Get("tprunes:seconds"));
 
-      if (name == null)
+      if (name != null)
       {
         dsc.AppendLine(Lang.Get("tprunes:rune_bound_to") + " " + name);
       }

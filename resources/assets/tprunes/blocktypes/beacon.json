@@ -4,10 +4,21 @@
   "class": "Block",
   "entityClass": "BEBeacon",
   "entityBehaviors": [{ "name": "Animatable" }],
-  "creativeinventory": { 
+  "creativeinventory": {
     "general": ["*"],
     "tprunesmod": ["*"]
-   },
+  },
+  "attributes": {
+    "handbook": {
+      "groupBy": ["rune_beacon-*"],
+			"extraSections": [
+					{ 
+            "title": "handbooktitle_tp_runes_element", 
+            "text": "handbooktext_tp_runes_element"
+           }
+				]
+    }
+  },
   "blockmaterial": "Stone",
   "drawtype": "json",
   "variantgroups": [

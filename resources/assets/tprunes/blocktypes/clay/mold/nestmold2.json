@@ -5,7 +5,12 @@
     "*-burned": "BlockToolMold"
   },
   "behaviorsByType": {
-    "*-raw": [{ "name": "UnstableFalling" }, { "name": "RightClickPickup" }],
+    "*-raw": [
+      { "name": "GroundStorable", "properties": { "layout": "SingleCenter" } },
+      { "name": "Unplaceable", "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility" }, 
+      { "name": "UnstableFalling" }, 
+      { "name": "RightClickPickup" }
+    ],
     "*": [{ "name": "UnstableFalling" }]
   },
   "variantgroups": [{ "code": "type", "states": ["raw", "burned"] }],
@@ -61,7 +66,7 @@
       "meltingPoint": 650,
       "meltingDuration": 30,
       "smeltedRatio": 1,
-      "smeltingType": "bake",
+      "smeltingType": "fire",
       "smeltedStack": {
         "type": "block",
         "code": "rune_stone_nest_mold2-burned"

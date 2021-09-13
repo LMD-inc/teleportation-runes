@@ -2,6 +2,7 @@
 	<PropertyGroup>
 		<LangVersion>7.2</LangVersion>
 		<TargetFramework>net461</TargetFramework>
+    <OutputType>Library</OutputType>
 	</PropertyGroup>
 	
 	<ItemGroup>
