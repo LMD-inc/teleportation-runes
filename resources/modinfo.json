@@ -2,13 +2,13 @@
 	"type": "code",
 	"name": "Teleportation Runes",
 	"modid": "tprunes",
-	"version": "0.9.0",
+	"version": "1.0.1",
 	
 	"description" : "Mod that adds beacon-based teleportation system into the game.",
 	"website": "https://github.com/LMD-inc/teleportation-runes",
 	"authors": [ "LMD-Inc.", "dKosher" ],
 	
 	"dependencies": {
-		"game": "1.14.10"
+		"game": "1.15.5"
 	}
 }

@@ -35,22 +35,70 @@
     },
     "attributesByType": {
       "*-copper": {
-        "tptime": 5
+        "tptime": 5,
+        "handbook": {
+          "extraSections": [
+              { 
+                "title": "handbooktitle_tp_runes_element", 
+                "text": "handbooktext_tp_runes_element"
+               }
+            ]
+        }
       },
       "*-tinbronze": {
-        "tptime": 4
+        "tptime": 4,
+        "handbook": {
+          "extraSections": [
+              { 
+                "title": "handbooktitle_tp_runes_element", 
+                "text": "handbooktext_tp_runes_element"
+               }
+            ]
+        }
       },
       "*-bismuthbronze": {
-        "tptime": 4
+        "tptime": 4,
+        "handbook": {
+          "extraSections": [
+              { 
+                "title": "handbooktitle_tp_runes_element", 
+                "text": "handbooktext_tp_runes_element"
+               }
+            ]
+        }
       },
       "*-blackbronze": {
-        "tptime": 4
+        "tptime": 4,
+        "handbook": {
+          "extraSections": [
+              { 
+                "title": "handbooktitle_tp_runes_element", 
+                "text": "handbooktext_tp_runes_element"
+               }
+            ]
+        }
       },
       "*-iron": {
-        "tptime": 3
+        "tptime": 3,
+        "handbook": {
+          "extraSections": [
+              { 
+                "title": "handbooktitle_tp_runes_element", 
+                "text": "handbooktext_tp_runes_element"
+               }
+            ]
+        }
       },
       "*-steel": {
-        "tptime": 2
+        "tptime": 2,
+        "handbook": {
+          "extraSections": [
+              { 
+                "title": "handbooktitle_tp_runes_element", 
+                "text": "handbooktext_tp_runes_element"
+               }
+            ]
+        }
       }
     },
     "textures": {
